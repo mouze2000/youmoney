@@ -206,6 +206,7 @@ class ItemListPanel (wx.Panel):
 
     def init(self):
         self.list.InsertColumn(0, _("Date:"))
+        self.list.SetColumnWidth(0, 100)
         self.list.InsertColumn(1, _("Category"))
         self.list.InsertColumn(2, _("Money"))
         if self.type == 'payout':

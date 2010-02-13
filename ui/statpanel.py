@@ -4,6 +4,7 @@ import wx
 import  wx.html as  html
 import datetime
 import logfile
+import drawstat
 
 class StatPanel (wx.Panel):
     def __init__(self, parent, readydata):
@@ -36,7 +37,8 @@ class StatPanel (wx.Panel):
         #box.Add(wx.StaticText(self, -1, _(" Month "), (8, 10)), 0, wx.ALIGN_CENTER)
         
         box.Add(wx.StaticText(self, -1, _("   Type "), (8, 10)), 0, wx.ALIGN_CENTER)
-        items = [_('Payout and Income'), _('Payout'), _('Income')]
+        #items = [_('Payout and Income'), _('Payout'), _('Income')]
+        items = [_('Payout'), _('Income')]
         self.default_type = items[0]
         self.type = wx.ComboBox(self, -1, items[0], (60, 50), (100, -1), items, wx.CB_DROPDOWN)
         box.Add(self.type, 0, wx.EXPAND)
