@@ -723,12 +723,13 @@ class MainFrame (wx.Frame):
                 cmd = exe
             else:
                 cmd = os.path.join(self.rundir, 'updater.pyw')
+            cmd = '"' + cmd + '"'
         elif sys.platform == 'darwin':
             if self.rundir.startswith(os.environ['HOME']):
-                cmd = '/usr/bin/python ' + os.path.join(self.rundir, 'updater.py')
+                cmd = '/usr/bin/python "%s"' % (os.path.join(self.rundir, 'updater.py'))
         elif sys.platform.startswith('linux'):
             if not self.rundir.startswith('/usr/share'):
-                cmd = '/usr/bin/python ' + os.path.join(self.rundir, 'updater.py')
+                cmd = '/usr/bin/python "%s"' % (os.path.join(self.rundir, 'updater.py'))
         if cmd:
             p = subprocess.Popen(cmd, shell=True)
         else:
