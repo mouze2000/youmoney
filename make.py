@@ -124,7 +124,7 @@ def debian_main():
     os.system(cmd)
 
 def rpm_main():
-    os.path.insert(0, 'rpm')
+    sys.path.insert(0, 'rpm')
     import  make
     os.chdir('rpm')
     make.main()

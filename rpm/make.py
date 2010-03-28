@@ -15,8 +15,11 @@ def change_version(filename, ver):
     fw.close()
 
 def main():
-    spechome = os.path.dirname(os.path.abspath(__file__))
+    #spechome = os.path.dirname(os.path.abspath(__file__))
+    spechome = os.getcwd()
+    print 'spechome:', spechome
     home = os.path.dirname(spechome)
+    print 'home:', home
     sys.path.insert(0, home)
     import version
     

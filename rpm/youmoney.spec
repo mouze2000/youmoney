@@ -1,5 +1,5 @@
 Name: YouMoney
-Version: 0.8.1
+Version: 0.8.3
 Release: 1
 Summary: YouMoney - free personal finance software
 Group: Applications/Archiving
